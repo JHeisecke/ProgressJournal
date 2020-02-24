@@ -24,7 +24,10 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        			
+        if let selectedImage = info[.originalImage] as? UIImage {
+            imageProgress.image = selectedImage
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func existingFiles(_ sender: Any) {
