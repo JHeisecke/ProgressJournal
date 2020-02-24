@@ -61,4 +61,16 @@ class MenuProgressTableViewController: UITableViewController {
         updateCoreData() 
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedProgress = progresses[indexPath.row]
+        performSegue(withIdentifier: "gotoprogress", sender: selectedProgress)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let showProgressVC = segue.destination as? ShowProgressViewController {
+            if let selectedProg = sender as? Progress {
+                showProgressVC.progress = selectedProg
+            }
+        }
+    }
 }

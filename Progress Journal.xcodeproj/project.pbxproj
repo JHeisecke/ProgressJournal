@@ -15,6 +15,7 @@
 		CE0C255A23F9B84C00C913AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0C255823F9B84C00C913AF /* LaunchScreen.storyboard */; };
 		CE0C256223F9CA9600C913AF /* MenuProgressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C256123F9CA9600C913AF /* MenuProgressTableViewController.swift */; };
 		CE0C256423F9CB6100C913AF /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C256323F9CB6100C913AF /* FormViewController.swift */; };
+		CE3E44C4240460260075CB2A /* ShowProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E44C3240460260075CB2A /* ShowProgressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CE0C255B23F9B84C00C913AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0C256123F9CA9600C913AF /* MenuProgressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProgressTableViewController.swift; sourceTree = "<group>"; };
 		CE0C256323F9CB6100C913AF /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		CE3E44C3240460260075CB2A /* ShowProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProgressViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CE0C254A23F9B84800C913AF /* AppDelegate.swift */,
 				CE0C254C23F9B84800C913AF /* SceneDelegate.swift */,
 				CE0C256123F9CA9600C913AF /* MenuProgressTableViewController.swift */,
+				CE3E44C3240460260075CB2A /* ShowProgressViewController.swift */,
 				CE0C256323F9CB6100C913AF /* FormViewController.swift */,
 				CE0C255023F9B84800C913AF /* Main.storyboard */,
 				CE0C255623F9B84C00C913AF /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3E44C4240460260075CB2A /* ShowProgressViewController.swift in Sources */,
 				CE0C255523F9B84800C913AF /* Progress_Journal.xcdatamodeld in Sources */,
 				CE0C256223F9CA9600C913AF /* MenuProgressTableViewController.swift in Sources */,
 				CE0C254B23F9B84800C913AF /* AppDelegate.swift in Sources */,
