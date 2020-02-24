@@ -41,6 +41,15 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func addProgress(_ sender: Any) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let newProgress = Progress(context: context)
+            newProgress.title = titleProgress.text
+            newProgress.image = imageProgress.image?.jpegData(compressionQuality: 1.0)
+            
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        }
         
+        
+        navigationController?.popViewController(animated: true)
     }
 }
