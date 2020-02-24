@@ -8,24 +8,33 @@
 
 import UIKit
 
-class FormViewController: UIViewController {
+class FormViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
 
     @IBOutlet weak var imageProgress: UIImageView!
     @IBOutlet weak var titleProgress: UITextField!
     @IBOutlet weak var addButton: UIButton!
     
+    var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addButton.layer.cornerRadius = addButton.frame.height / 2
 
+        imagePicker.delegate = self
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        			
     }
     
     @IBAction func existingFiles(_ sender: Any) {
-        
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func openCamera(_ sender: Any) {
-        
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func addProgress(_ sender: Any) {
