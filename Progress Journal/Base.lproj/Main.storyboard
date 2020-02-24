@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7K-uR-ADp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Progress Journal-->
+        <scene sceneID="Ljz-AI-0iq">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="Y46-iy-bVo" customClass="MenuProgressTableViewController" customModule="Progress_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ez4-Wb-wKC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Y46-iy-bVo" id="l2m-lv-Cof"/>
+                            <outlet property="delegate" destination="Y46-iy-bVo" id="0J8-h7-V0d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Progress Journal" id="nVC-Wf-0l9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="ABi-10-YEm">
+                            <connections>
+                                <segue destination="VXe-Yj-RbH" kind="show" id="eYL-Bn-Xg6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCh-rs-1RE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="249" y="27"/>
+        </scene>
+        <!--Form View Controller-->
+        <scene sceneID="bdd-jG-wbI">
+            <objects>
+                <viewController id="VXe-Yj-RbH" customClass="FormViewController" customModule="Progress_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kl9-wN-ppM" customClass="F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t7B-gh-PFH">
+                                <rect key="frame" x="50" y="108" width="314" height="314"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="t7B-gh-PFH" secondAttribute="height" multiplier="1:1" id="Wfw-PC-Ovr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWI-Yx-IJJ">
+                                <rect key="frame" x="177" y="473" width="60" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6d5-Cx-Plr"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addProgress:" destination="VXe-Yj-RbH" eventType="touchUpInside" id="N7I-eS-UW8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVJ-GI-LER">
+                                <rect key="frame" x="50" y="431" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q0F-Ls-Msa" firstAttribute="trailing" secondItem="wVJ-GI-LER" secondAttribute="trailing" constant="50" id="033-Ji-eeK"/>
+                            <constraint firstItem="BWI-Yx-IJJ" firstAttribute="centerX" secondItem="wVJ-GI-LER" secondAttribute="centerX" id="II2-UG-6Xz"/>
+                            <constraint firstItem="q0F-Ls-Msa" firstAttribute="trailing" secondItem="t7B-gh-PFH" secondAttribute="trailing" constant="50" id="JRc-k5-9At"/>
+                            <constraint firstItem="t7B-gh-PFH" firstAttribute="leading" secondItem="q0F-Ls-Msa" secondAttribute="leading" constant="50" id="OhJ-1Z-I7h"/>
+                            <constraint firstItem="wVJ-GI-LER" firstAttribute="leading" secondItem="q0F-Ls-Msa" secondAttribute="leading" constant="50" id="TUX-UM-sDd"/>
+                            <constraint firstItem="t7B-gh-PFH" firstAttribute="top" secondItem="q0F-Ls-Msa" secondAttribute="top" constant="20" id="YnN-kU-dvK"/>
+                            <constraint firstItem="wVJ-GI-LER" firstAttribute="centerX" secondItem="t7B-gh-PFH" secondAttribute="centerX" id="ePN-3x-hTM"/>
+                            <constraint firstItem="wVJ-GI-LER" firstAttribute="top" secondItem="t7B-gh-PFH" secondAttribute="bottom" constant="9" id="qZZ-rO-o4W"/>
+                            <constraint firstItem="BWI-Yx-IJJ" firstAttribute="top" secondItem="wVJ-GI-LER" secondAttribute="bottom" constant="8" id="zpr-Cy-fwj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q0F-Ls-Msa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7YV-mm-gtJ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="mfQ-B9-e4J"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="hwF-Gk-AVd">
+                                <connections>
+                                    <action selector="openCamera:" destination="VXe-Yj-RbH" id="P8A-IZ-alE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="Ja9-jd-lXj">
+                                <connections>
+                                    <action selector="existingFiles:" destination="VXe-Yj-RbH" id="V7c-P3-5gj"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="BWI-Yx-IJJ" id="P0P-ft-1Lp"/>
+                        <outlet property="imageProgress" destination="t7B-gh-PFH" id="C2O-vb-W1a"/>
+                        <outlet property="titleProgress" destination="wVJ-GI-LER" id="OcV-9Y-hni"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUd-uj-0uj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144.9275362318842" y="26.785714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O9l-id-VK9">
+            <objects>
+                <navigationController id="I7K-uR-ADp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Opk-Zv-bAn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y46-iy-bVo" kind="relationship" relationship="rootViewController" id="73z-NZ-nmz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maa-5c-kuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-670" y="27"/>
         </scene>
     </scenes>
 </document>

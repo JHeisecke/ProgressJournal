@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		CE0C254B23F9B84800C913AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C254A23F9B84800C913AF /* AppDelegate.swift */; };
 		CE0C254D23F9B84800C913AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C254C23F9B84800C913AF /* SceneDelegate.swift */; };
-		CE0C254F23F9B84800C913AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C254E23F9B84800C913AF /* ViewController.swift */; };
 		CE0C255223F9B84800C913AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0C255023F9B84800C913AF /* Main.storyboard */; };
 		CE0C255523F9B84800C913AF /* Progress_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE0C255323F9B84800C913AF /* Progress_Journal.xcdatamodeld */; };
 		CE0C255723F9B84C00C913AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0C255623F9B84C00C913AF /* Assets.xcassets */; };
 		CE0C255A23F9B84C00C913AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0C255823F9B84C00C913AF /* LaunchScreen.storyboard */; };
+		CE0C256223F9CA9600C913AF /* MenuProgressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C256123F9CA9600C913AF /* MenuProgressTableViewController.swift */; };
+		CE0C256423F9CB6100C913AF /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C256323F9CB6100C913AF /* FormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE0C254723F9B84800C913AF /* Progress Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Progress Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0C254A23F9B84800C913AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0C254C23F9B84800C913AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE0C254E23F9B84800C913AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE0C255123F9B84800C913AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE0C255423F9B84800C913AF /* Progress_Journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Progress_Journal.xcdatamodel; sourceTree = "<group>"; };
 		CE0C255623F9B84C00C913AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0C255923F9B84C00C913AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0C255B23F9B84C00C913AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0C256123F9CA9600C913AF /* MenuProgressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProgressTableViewController.swift; sourceTree = "<group>"; };
+		CE0C256323F9CB6100C913AF /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			children = (
 				CE0C254A23F9B84800C913AF /* AppDelegate.swift */,
 				CE0C254C23F9B84800C913AF /* SceneDelegate.swift */,
-				CE0C254E23F9B84800C913AF /* ViewController.swift */,
+				CE0C256123F9CA9600C913AF /* MenuProgressTableViewController.swift */,
+				CE0C256323F9CB6100C913AF /* FormViewController.swift */,
 				CE0C255023F9B84800C913AF /* Main.storyboard */,
 				CE0C255623F9B84C00C913AF /* Assets.xcassets */,
 				CE0C255823F9B84C00C913AF /* LaunchScreen.storyboard */,
@@ -142,8 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0C255523F9B84800C913AF /* Progress_Journal.xcdatamodeld in Sources */,
-				CE0C254F23F9B84800C913AF /* ViewController.swift in Sources */,
+				CE0C256223F9CA9600C913AF /* MenuProgressTableViewController.swift in Sources */,
 				CE0C254B23F9B84800C913AF /* AppDelegate.swift in Sources */,
+				CE0C256423F9CB6100C913AF /* FormViewController.swift in Sources */,
 				CE0C254D23F9B84800C913AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
