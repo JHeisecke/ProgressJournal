@@ -55,7 +55,7 @@ class MenuProgressTableViewController: UITableViewController {
                 
                 context.delete(progresses[indexPath.row])
                 (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-                //tableView.reloadData()
+
             }
         }
         updateCoreData() 
